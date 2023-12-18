@@ -10,7 +10,7 @@ require('dotenv').config();
 const dbPath=process.env.DB_PATH
 
 app.use(express.json())
-app.use(cors())
+
 
 let db;
 const initializeDbAndServer= async()=>{
@@ -35,7 +35,7 @@ initializeDbAndServer();
 //Write all apis here 
 
 app.get("/hotels", (request,response)=>{
-    response.json("hii")
+    response.json({"hii"})
 })
 
 
