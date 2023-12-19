@@ -20,7 +20,8 @@ const initializeDbAndServer= async()=>{
             driver:sqlite3.Database
         })
 
-        app.listen(3000, ()=>{
+        const PORT = process.env.PORT || 3000;
+        app.listen(port, ()=>{
             console.log("Server Running at 3000")
         })
 
@@ -34,7 +35,7 @@ initializeDbAndServer();
 
 //Write all apis here 
 
-app.get("/hotels", async(request,response)=>{
+app.get("/", (request,response)=>{
 
   response.send("hi")
 
