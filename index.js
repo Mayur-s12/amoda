@@ -34,8 +34,10 @@ initializeDbAndServer();
 
 //Write all apis here 
 
-app.get("/hotels", (request,response)=>{
-    response.json({"hii"})
+app.get("/hotels", async(request,response)=>{
+
+  response.send("hi")
+
 })
 
 
