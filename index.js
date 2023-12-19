@@ -36,7 +36,7 @@ initializeDbAndServer();
 
 //Write all apis here 
 
-app.use("/", (request,response)=>{
+app.get("/", (request,response)=>{
 
   response.send("hi")
 
