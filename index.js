@@ -9,6 +9,7 @@ const cors=require("cors")
 require('dotenv').config();
 const dbPath=process.env.DB_PATH
 
+app.use(cors())
 app.use(express.json())
 
 
@@ -21,7 +22,7 @@ const initializeDbAndServer= async()=>{
         })
 
         const PORT = process.env.PORT || 3000;
-        app.listen(port, ()=>{
+        app.listen(PORT, ()=>{
             console.log("Server Running at 3000")
         })
 
