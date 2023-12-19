@@ -6,8 +6,8 @@ const {open}=require("sqlite")
 const sqlite3=require("sqlite3")
 const cors=require("cors")
 
-require('dotenv').config();
-const dbPath=process.env.DB_PATH
+const path=require("path")
+const dbPath=path.join(__dirname,"amodaData.db")
 
 app.use(cors())
 app.use(express.json())
@@ -21,8 +21,8 @@ const initializeDbAndServer= async()=>{
             driver:sqlite3.Database
         })
 
-        const PORT = process.env.PORT || 3000;
-        app.listen(PORT, ()=>{
+        
+        app.listen(3000, ()=>{
             console.log("Server Running at 3000")
         })
 
